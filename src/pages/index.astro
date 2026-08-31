@@ -11,38 +11,332 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, 桔子财富咨询有限公司!</h1>
-			<p>
-				Welcome to the official 桔子财富咨询有限公司.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
+		
+<header id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#top" class="logo">弘策<span class="dot">·</span>咨询</a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#services">服务</a>
+      <a href="#approach">方法论</a>
+      <a href="#results">业绩</a>
+      <a href="#case">案例</a>
+      <a href="#contact" class="nav-cta">预约洽谈</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="wrap">
+    <section class="hero" id="hero" style="border-top:none;padding-top:200px;">
+      <div>
+        <div class="hero-eyebrow">战略与运营咨询</div>
+        <h1>帮助成长型企业，把决定做对，把执行做实</h1>
+        <p class="lead">我们与中国中大型企业的管理团队并肩工作，把模糊的增长目标拆解为可执行的战略与运营方案，并陪跑到结果落地。</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">预约初步洽谈</a>
+          <a href="#case" class="btn-ghost">查看客户案例</a>
+        </div>
+      </div>
+      <div class="hero-graphic">
+        <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="40" x2="20" y2="320" stroke="#DAD4C6" stroke-width="1"/>
+          <line x1="20" y1="320" x2="400" y2="320" stroke="#DAD4C6" stroke-width="1"/>
+          <line x1="20" y1="240" x2="400" y2="240" stroke="#DAD4C6" stroke-width="1" stroke-dasharray="2 6"/>
+          <line x1="20" y1="160" x2="400" y2="160" stroke="#DAD4C6" stroke-width="1" stroke-dasharray="2 6"/>
+          <line x1="20" y1="80" x2="400" y2="80" stroke="#DAD4C6" stroke-width="1" stroke-dasharray="2 6"/>
+          <polyline points="20,300 90,270 160,260 230,180 300,130 380,60"
+                    fill="none" stroke="#14213D" stroke-width="2.5"/>
+          <polyline points="20,300 90,270 160,260 230,180 300,130 380,60"
+                    fill="none" stroke="#A9812F" stroke-width="2.5"
+                    stroke-dasharray="520" stroke-dashoffset="520" id="heroLine"/>
+          <circle cx="20" cy="300" r="4.5" fill="#14213D"/>
+          <circle cx="160" cy="260" r="4.5" fill="#14213D"/>
+          <circle cx="300" cy="130" r="4.5" fill="#14213D"/>
+          <circle cx="380" cy="60" r="5.5" fill="#A9812F"/>
+          <text x="20" y="345" font-size="12" fill="#5B6472" font-family="Noto Sans SC, sans-serif">项目启动</text>
+          <text x="330" y="345" font-size="12" fill="#5B6472" font-family="Noto Sans SC, sans-serif">目标达成</text>
+        </svg>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>服务范围</h2>
+        <p class="desc">从战略判断到组织执行，我们提供四类紧密相关的咨询服务，可单独委托，也可组合成完整的转型项目。</p>
+      </div>
+
+      <div class="service-row">
+        <div class="service-name">增长战略</div>
+        <div class="service-desc">基于市场、竞争与自身能力的系统性诊断，帮助管理层明确未来三年最值得押注的方向，避免资源分散在过多的机会上。</div>
+        <div class="service-tags"><span>市场诊断</span><span>业务组合</span><span>战略规划</span></div>
+      </div>
+      <div class="service-row">
+        <div class="service-name">运营效率提升</div>
+        <div class="service-desc">深入生产、供应链与费用结构，找到被日常运营掩盖的效率损耗，制定可量化、可追踪的改善计划。</div>
+        <div class="service-tags"><span>成本结构</span><span>流程优化</span><span>供应链</span></div>
+      </div>
+      <div class="service-row">
+        <div class="service-name">组织与人才</div>
+        <div class="service-desc">当战略调整时，组织架构与激励机制往往滞后。我们帮助企业重新设计汇报关系、决策权与薪酬体系，让组织跟上战略。</div>
+        <div class="service-tags"><span>组织设计</span><span>激励机制</span><span>治理结构</span></div>
+      </div>
+      <div class="service-row">
+        <div class="service-name">并购与整合</div>
+        <div class="service-desc">从标的筛选、尽职调查到并购后 100 天整合计划，确保收购创造的价值不会在整合过程中流失。</div>
+        <div class="service-tags"><span>尽职调查</span><span>估值</span><span>并购整合</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>我们的工作方法</h2>
+        <p class="desc">每一个项目都遵循同样的四个阶段，确保建议不只是一份报告，而是真正被执行、被验证。</p>
+      </div>
+      <div class="approach-list">
+        <div class="approach-item">
+          <div class="approach-num">01</div>
+          <div class="approach-title">诊断现状</div>
+          <div class="approach-desc">与管理层、一线员工深度访谈，结合财务与运营数据，找到真正制约增长的瓶颈，而不是表面症状。</div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">02</div>
+          <div class="approach-title">制定方案</div>
+          <div class="approach-desc">提出 2-3 个可行路径，逐一测算投入、周期与预期回报，与管理层共同选择最适合当前阶段的方案。</div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">03</div>
+          <div class="approach-title">陪跑执行</div>
+          <div class="approach-desc">顾问团队常驻客户现场，与内部团队共同推进关键举措，及时调整计划中不符合实际的部分。</div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">04</div>
+          <div class="approach-title">复盘交接</div>
+          <div class="approach-desc">项目结束前完成能力转移，确保内部团队能够独立延续机制，而不依赖顾问长期驻场。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="results">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>过去五年的项目成果</h2>
+        <p class="desc">数字来自我们与客户共同追踪的项目复盘，而非单方面估算。</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-num" data-target="86">0</div>
+          <div class="stat-label">已完成的战略与运营项目</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="14" data-suffix="%">0</div>
+          <div class="stat-label">项目落地后平均运营成本下降幅度</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="9" data-suffix="个月">0</div>
+          <div class="stat-label">从诊断到首批成果落地的平均周期</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="73" data-suffix="%">0</div>
+          <div class="stat-label">客户在项目结束后持续复购的比例</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE -->
+  <section id="case">
+    <div class="wrap">
+      <div class="case">
+        <div>
+          <div class="case-client">案例 · 华东制造企业</div>
+          <blockquote>“弘策没有给我们一份放在抽屉里的报告，他们和我们的生产、采购团队一起，把方案落到了每周的排产会上。”</blockquote>
+          <div class="attribution">— 某汽车零部件集团 运营副总裁</div>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <span class="label">项目周期</span>
+            <span class="value">7 个月</span>
+          </div>
+          <div class="case-metric">
+            <span class="label">单位生产成本下降</span>
+            <span class="value">11.8%</span>
+          </div>
+          <div class="case-metric">
+            <span class="label">交付准时率提升</span>
+            <span class="value">22 个百分点</span>
+          </div>
+          <div class="case-metric">
+            <span class="label">涉及工厂数量</span>
+            <span class="value">3 家</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="contact-inner">
+        <div>
+          <h2>聊聊您正在面对的问题</h2>
+          <p class="desc">无论是明确的项目需求，还是尚未想清楚的增长困惑，欢迎先和我们的顾问约一次 30 分钟的交流，不收取任何费用。</p>
+          <div class="contact-info">
+            <div class="row"><span class="k">电话</span><span>010-8888 6666</span></div>
+            <div class="row"><span class="k">邮箱</span><span>contact@hongce-consulting.com</span></div>
+            <div class="row"><span class="k">地址</span><span>北京市朝阳区建国路 88 号 21 层</span></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="field">
+            <label for="name">姓名</label>
+            <input id="name" type="text" placeholder="您的称呼" required>
+          </div>
+          <div class="field">
+            <label for="company">公司</label>
+            <input id="company" type="text" placeholder="公司名称">
+          </div>
+          <div class="field">
+            <label for="phone">联系方式</label>
+            <input id="phone" type="text" placeholder="手机号或邮箱" required>
+          </div>
+          <div class="field">
+            <label for="msg">想聊的问题</label>
+            <textarea id="msg" placeholder="简单描述一下您目前遇到的情况"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">提交预约</button>
+          <div class="form-note" id="formNote"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-row">
+      <a href="#top" class="logo">弘策<span class="dot">·</span>咨询</a>
+      <div class="footer-links">
+        <a href="#services">服务</a>
+        <a href="#approach">方法论</a>
+        <a href="#results">业绩</a>
+        <a href="#contact">联系我们</a>
+      </div>
+      <div class="footer-meta">© 2026 弘策咨询. 保留所有权利.</div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  // ---------- 导航栏滚动状态 ----------
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(window.scrollY > 40){
+      header.classList.add('scrolled');
+    }else{
+      header.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---------- 移动端菜单 ----------
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('primaryNav');
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('open');
+      toggle.classList.remove('open');
+    });
+  });
+
+  // ---------- 滚动高亮当前导航项 ----------
+  var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var sections = navLinks
+    .map(function(a){ return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  if('IntersectionObserver' in window){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = '#' + entry.target.id;
+        var link = navLinks.find(function(a){ return a.getAttribute('href') === id; });
+        if(!link) return;
+        if(entry.isIntersecting){
+          navLinks.forEach(function(a){ a.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+  // ---------- Hero 入场动画 + 折线动画 ----------
+  var hero = document.getElementById('hero');
+  requestAnimationFrame(function(){
+    hero.classList.add('in');
+  });
+  var heroLine = document.getElementById('heroLine');
+  if(heroLine){
+    setTimeout(function(){
+      heroLine.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1)';
+      heroLine.style.strokeDashoffset = '0';
+    }, 250);
+  }
+
+  // ---------- 数字滚动统计 ----------
+  var stats = document.querySelectorAll('.stat-num');
+  var statObserver = new IntersectionObserver(function(entries, obs){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseFloat(el.getAttribute('data-target'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var start = null;
+      var duration = 1200;
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.round(target * eased);
+        el.textContent = current + suffix;
+        if(progress < 1){
+          requestAnimationFrame(step);
+        }
+      }
+      requestAnimationFrame(step);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  stats.forEach(function(el){ statObserver.observe(el); });
+
+  // ---------- 联系表单（演示用，无后端） ----------
+  var form = document.getElementById('contactForm');
+  var note = document.getElementById('formNote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    note.textContent = '已收到，我们的顾问会在一个工作日内与您联系。';
+    note.style.color = '#A9812F';
+    form.reset();
+  });
+})();
+</script>
 	</body>
 </html>
